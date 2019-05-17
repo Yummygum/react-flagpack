@@ -1,0 +1,65 @@
+{
+  "name": "react-flag-pack",
+  "description": "A React flag pack",
+  "version": "0.0.1",
+  "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yummygum/react-flag-pack.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "languages",
+    "flag",
+    "iso",
+    "flag set",
+    "countries"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "main": "dist/react-flag-rollup.cjs.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yummygum/react-flag-pack/issues"
+  },
+  "homepage": "https://github.com/Yummygum/react-flag-pack/#readme",
+  "scripts": {
+    "build": "rm -rf dist && rollup -c",
+    "test": "echo 'tests here'",
+    "prepublish": "npm test && npm version patch",
+    "publish": "npm run build && git add -A dist",
+    "postpublish": "git push && git push --tags"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "flag-pack-core": "^0.0.1"
+  },
+  "peerDependencies": {
+    "flag-pack-core": "^0.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.3",
+    "react": "2.5.11",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-react": "^5.0.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
