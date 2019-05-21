@@ -4,14 +4,14 @@ import './Flag.scss'
 interface Props {
   code: String,
   size?: String,
-  customBorderRadius?: String
   dropshadow?: Boolean,
   hasBorder?: Boolean,
   gradient?: String,
   hasBorderRadius?: Boolean,
+  customBorderRadius?: any
 }
 
-class Flag extends React.PureComponent<Props> {
+class Flag extends React.PureComponent<Props, void> {
   public render() {
     const {
       code,
@@ -20,17 +20,21 @@ class Flag extends React.PureComponent<Props> {
       hasBorder = false,
       dropshadow = false,
       hasBorderRadius = true,
-      // customBorderRadius,
+      customBorderRadius,
     } = this.props
 
     return (
-      <div className={
-        `flag
-        ${gradient}
-        size-${size}
-        ${hasBorder ? 'border' : ''}
-        ${dropshadow ? 'dropshadow' : ''}
-        ${hasBorderRadius ? 'border-radius' : ''}`
+      <div
+        style={{
+          borderRadius: customBorderRadius
+        }}
+        className={
+          `flag
+          ${gradient}
+          size-${size}
+          ${hasBorder ? 'border' : ''}
+          ${dropshadow ? 'dropshadow' : ''}
+          ${hasBorderRadius ? 'border-radius' : ''}`.replace(/\s\s+/g, ' ').trim()
       }>
         <img src={`https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/${size.toLowerCase()}/${code.toUpperCase()}.svg?sanitize=true`}/>
       </div>
