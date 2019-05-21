@@ -34,7 +34,7 @@ styleInject(css);
 
 class Flag extends React.PureComponent {
     render() {
-        const { code, gradient = '', size = 'l', hasBorder = false, dropshadow = false, hasBorderRadius = true, customBorderRadius, } = this.props;
+        const { gradient = '', size = 'l', hasBorder = false, dropshadow = false, hasBorderRadius = true, code, customBorderRadius, className } = this.props;
         return (React.createElement("div", { style: {
                 borderRadius: customBorderRadius
             }, className: `flag
@@ -42,9 +42,11 @@ class Flag extends React.PureComponent {
           size-${size}
           ${hasBorder ? 'border' : ''}
           ${dropshadow ? 'dropshadow' : ''}
-          ${hasBorderRadius ? 'border-radius' : ''}`.replace(/\s\s+/g, ' ').trim() },
+          ${hasBorderRadius ? 'border-radius' : ''}
+          ${className}`.replace(/\s\s+/g, ' ').trim() },
             React.createElement("img", { src: `https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/${size.toLowerCase()}/${code.toUpperCase()}.svg?sanitize=true` })));
     }
 }
+//# sourceMappingURL=Flag.js.map
 
 module.exports = Flag;
