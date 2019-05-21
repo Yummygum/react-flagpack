@@ -5,10 +5,10 @@
     "target": "es2017",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "strictNullChecks": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
     "sourceMap": true
   },
   "include": [
