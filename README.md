@@ -29,7 +29,7 @@ Use in JSX:
 
 | key   | value   | required | default | format |
 |-------|-------|------|------|------|
-| code |  String | true | - | see all codes |
+| country code |  String | true | - | see all codes |
 | size |  String | false | l | 's', 'm' or 'l' |
 | className |  String | false | - | - |
 | dropshadow |  boolean | false | false | - |
