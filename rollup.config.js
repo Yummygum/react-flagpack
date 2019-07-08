@@ -42,7 +42,7 @@ if (env === prod) {
 
 export default {
   plugins,
-  external: [ 'react' ],
+  external: [ 'react', 'flag-pack-core'],
   input: './src/main.js',
   output: {
     file: 'dist/react-flag-rollup.cjs.js',
