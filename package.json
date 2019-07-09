@@ -1,7 +1,7 @@
 {
   "name": "react-flag-pack",
   "description": "A React flag pack",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
   "repository": {
     "type": "git",
@@ -38,14 +38,7 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "dependencies": {
-    "flag-pack-core": "^0.0.1"
-  },
-  "peerDependencies": {
-    "flag-pack-core": "^0.0.1"
-  },
   "devDependencies": {
-    "node-sass": "^4.12.0",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
@@ -58,6 +51,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "copy-webpack-plugin": "^4.5.3",
+    "node-sass": "^4.12.0",
     "postcss-clean": "^1.1.0",
     "react": "^16.8.*",
     "rollup-plugin-babel": "^4.3.2",
@@ -66,6 +60,7 @@
     "rollup-plugin-css-only": "latest",
     "rollup-plugin-livereload": "latest",
     "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-serve": "latest",
@@ -82,5 +77,8 @@
       "social": "@noudadrichem",
       "url": "https://noudadrichem.com"
     }
-  ]
+  ],
+  "dependencies": {
+    "flag-pack-core": "file:../flag-pack-core"
+  }
 }

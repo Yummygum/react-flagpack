@@ -1,6 +1,8 @@
 import * as React from 'react'
 import './Flag.scss'
 
+import { isoToCountryCode } from 'flag-pack-core'
+
 interface Props {
   code: String,
   size?: String,
@@ -39,7 +41,7 @@ class Flag extends React.PureComponent<Props, void> {
           ${hasBorderRadius ? 'border-radius' : ''}
           ${className}`.replace(/\s\s+/g, ' ').trim()
       }>
-        <img src={`https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/${size.toLowerCase()}/${code.toUpperCase()}.svg?sanitize=true`}/>
+        <img src={`https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/${size.toLowerCase()}/${isoToCountryCode(code).toUpperCase()}.svg?sanitize=true`}/>
       </div>
     )
   }
