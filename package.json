@@ -1,7 +1,7 @@
 {
   "name": "react-flag-pack",
   "description": "A React flag pack",
-  "version": "0.0.7",
+  "version": "0.0.11",
   "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
   "repository": {
     "type": "git",
@@ -79,6 +79,6 @@
     }
   ],
   "dependencies": {
-    "flag-pack-core": "file:../flag-pack-core"
+    "flag-pack-core": "0.0.18"
   }
 }
