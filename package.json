@@ -79,6 +79,6 @@
     }
   ],
   "dependencies": {
-    "flag-pack-core": "0.0.9"
+    "flag-pack-core": "0.0.18"
   }
 }
