@@ -22,7 +22,7 @@
   "main": "dist/react-flag-rollup.cjs.js",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Yummygum/react-flag-pack/issues"
+    "url": "https://github.com/Yummyg4um/react-flag-pack/issues"
   },
   "homepage": "https://github.com/Yummygum/react-flag-pack/#readme",
   "scripts": {
@@ -76,6 +76,16 @@
       "name": "Noud Adrichem",
       "social": "@noudadrichem",
       "url": "https://noudadrichem.com"
+    },
+    {
+      "name": "Donovan Roubos",
+      "social": "@donovanroubos",
+      "url": "https://donovanroubos.nl"
+    },
+    {
+      "name": "Yummygum",
+      "social": "@yummygum",
+      "url": "https://yummygum.com"
     }
   ],
   "dependencies": {

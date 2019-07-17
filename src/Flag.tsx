@@ -22,7 +22,7 @@ class Flag extends React.PureComponent<Props, void> {
       hasBorder = false,
       dropshadow = false,
       hasBorderRadius = true,
-      code,
+      code = 'NL',
       customBorderRadius,
       className
     } = this.props
