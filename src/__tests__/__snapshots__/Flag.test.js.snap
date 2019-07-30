@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render a small dutch flag 1`] = `
+<div
+  className="flag real-linear size-m dropshadow border-radius undefined"
+  style={
+    Object {
+      "borderRadius": undefined,
+    }
+  }
+>
+  <img
+    src="https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/m/NL.svg?sanitize=true"
+  />
+</div>
+`;

@@ -1,14 +1,17 @@
 {
   "presets": [
-    "stage-1",
-    "react",
+    "@babel/preset-react",
     [
-      "latest", {
-        "es2015": {
-          "modules": false
-        }
-      }
-    ]
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current",
+        },
+      },
+    ],
+    "@babel/preset-typescript",
   ],
-  "plugins": ["external-helpers"]
+  "plugins": [
+    "@babel/plugin-transform-modules-commonjs"
+  ]
 }
