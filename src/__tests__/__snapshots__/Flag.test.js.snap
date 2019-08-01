@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component with no flag code given along. 1`] = `
+<div
+  className="flag size-l border-radius undefined"
+  style={
+    Object {
+      "borderRadius": undefined,
+    }
+  }
+>
+  <img
+    src="https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/l/NL.svg?sanitize=true"
+  />
+</div>
+`;
+
 exports[`Should render a large Belgium flag with a real-circular gradient 1`] = `
 <div
   className="flag real-circular size-l border-radius undefined"
@@ -78,6 +93,21 @@ exports[`Should render a large Italian flag with a 10px border radius. 1`] = `
 exports[`Should render a large Italian flag with a border. 1`] = `
 <div
   className="flag size-l border border-radius undefined"
+  style={
+    Object {
+      "borderRadius": undefined,
+    }
+  }
+>
+  <img
+    src="https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/l/IT.svg?sanitize=true"
+  />
+</div>
+`;
+
+exports[`Should render a large Italian flag with no border radius 1`] = `
+<div
+  className="flag size-l undefined"
   style={
     Object {
       "borderRadius": undefined,
