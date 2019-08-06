@@ -19,7 +19,7 @@ class Flag extends React.PureComponent<Props, void> {
     const {
       gradient = '',
       size = 'l',
-      hasBorder = false,
+      hasBorder = true,
       dropshadow = false,
       hasBorderRadius = true,
       code = 'NL',
@@ -29,9 +29,11 @@ class Flag extends React.PureComponent<Props, void> {
 
     return (
       <div
-        style={{
+        style={
+          customBorderRadius && {
           borderRadius: customBorderRadius
-        }}
+          }
+        }
         className={
           `flag
           ${gradient}
@@ -39,7 +41,7 @@ class Flag extends React.PureComponent<Props, void> {
           ${hasBorder ? 'border' : ''}
           ${dropshadow ? 'dropshadow' : ''}
           ${hasBorderRadius ? 'border-radius' : ''}
-          ${className}`.replace(/\s\s+/g, ' ').trim()
+          ${className ? className : ''}`.replace(/\s\s+/g, ' ').trim()
       }>
         <img src={`https://raw.githubusercontent.com/Yummygum/flag-pack-core/master/svg/${size.toLowerCase()}/${isoToCountryCode(code).toUpperCase()}.svg?sanitize=true`}/>
       </div>
