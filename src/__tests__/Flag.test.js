@@ -58,7 +58,7 @@ test('Should render a large US flag with drop shadow', () => {
   let tree = component.toJSON()
 
   expect(tree).toMatchSnapshot()
-  expect(tree.props.className).toBe('flag size-l dropshadow border border-radius')
+  expect(tree.props.className).toBe('flag size-l border dropshadow border-radius')
 })
 
 test('Should render a large US flag with a custom classname', () => {
