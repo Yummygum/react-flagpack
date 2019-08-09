@@ -6,7 +6,7 @@ import { isoToCountryCode } from 'flag-pack-core'
 interface Props {
   code: String,
   size?: String,
-  dropshadow?: Boolean,
+  hasDropshadow?: Boolean,
   hasBorder?: Boolean,
   gradient?: 'top-down' | 'real-circular' | 'real-linear',
   hasBorderRadius?: Boolean,
@@ -20,7 +20,7 @@ class Flag extends React.PureComponent<Props, void> {
       gradient = '',
       size = 'l',
       hasBorder = false,
-      dropshadow = false,
+      hasDropshadow = false,
       hasBorderRadius = true,
       code = 'NL',
       customBorderRadius,
@@ -37,7 +37,7 @@ class Flag extends React.PureComponent<Props, void> {
           ${gradient}
           size-${size}
           ${hasBorder ? 'border' : ''}
-          ${dropshadow ? 'dropshadow' : ''}
+          ${hasDropshadow ? 'dropshadow' : ''}
           ${hasBorderRadius ? 'border-radius' : ''}
           ${className}`.replace(/\s\s+/g, ' ').trim()
       }>
