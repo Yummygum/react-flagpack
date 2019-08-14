@@ -11,7 +11,7 @@ npm install react-flag-pack --save
 ## Usage
 ```js
 // use own name as variable
-import Flag from 'vue-flag-pack'
+import Flag from 'react-flag-pack'
 ```
 
 Use in JSX:
@@ -20,7 +20,7 @@ Use in JSX:
   code="NL"
   gradient="real-linear"
   size="m"
-  dropshadow
+  hasDropshadow
 />
 ```
 </br>
@@ -32,7 +32,7 @@ Use in JSX:
 | country code |  String | true | - | see all codes |
 | size |  String | false | l | 's', 'm' or 'l' |
 | className |  String | false | - | - |
-| dropshadow |  boolean | false | false | - |
+| hasDropshadow |  boolean | false | false | - |
 | hasBorder |  boolean | false | true | - |
 | hasBorderRadius | boolean | false | true | - |
 | customBorderRadius |  String | false | - | - |
