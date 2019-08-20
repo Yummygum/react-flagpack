@@ -5,13 +5,13 @@
 ## Installation
 
 ```bash
-npm install react-flag-pack --save
+npm install react-flagpack --save
 ```
 
 ## Usage
 ```js
 // use own name as variable
-import Flag from 'vue-flag-pack'
+import Flag from 'react-flagpack'
 ```
 
 Use in JSX:

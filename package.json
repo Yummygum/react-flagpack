@@ -1,5 +1,5 @@
 {
-  "name": "react-flag-pack",
+  "name": "react-flagpack",
   "description": "A React flag pack",
   "version": "0.0.15",
   "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
@@ -14,7 +14,8 @@
     "flag",
     "iso",
     "flag set",
-    "countries"
+    "countries",
+    "flag-pack"
   ],
   "files": [
     "dist/*"
@@ -89,6 +90,6 @@
     }
   ],
   "dependencies": {
-    "flag-pack-core": "0.0.18"
+    "flagpack-core": "0.0.33"
   }
 }
