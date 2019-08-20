@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './Flag.scss'
 
-import { isoToCountryCode } from 'flag-pack-core'
+import { isoToCountryCode } from 'flagpack-core'
 
 interface Props {
   code: String,
