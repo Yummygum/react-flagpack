@@ -30,7 +30,7 @@
     "build": "rm -rf dist && NODE_ENV=production rollup -c",
     "dev": "rollup -cw",
     "test": "echo 'tests here'",
-    "//prepublish": "npm test && npm version patch",
+    "prepublish": "npm test && npm version patch",
     "publish": "npm run build && git add -A dist",
     "postpublish": "git push && git push --tags"
   },
