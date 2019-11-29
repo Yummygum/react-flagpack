@@ -70,7 +70,7 @@
     "tslib": "^1.9.3",
     "typescript": "^3.4.5",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^3.1.11"
   },
   "authors": [
     {
