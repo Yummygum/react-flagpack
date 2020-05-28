@@ -3813,10 +3813,10 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-flagpack-core@0.0.34:
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/flagpack-core/-/flagpack-core-0.0.34.tgz#abe490388673a1d1a7ef4ad87a556fcf3b9af5b0"
-  integrity sha512-xrya6UUu+vuH2+qlOUXKC9Hxl6CRaDMeb+lSHj+9ulXf9dDwzRxLznB+7LD997xowfuuWo3EPA1aHnQ51VOskA==
+flagpack-core@^0.0.38:
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/flagpack-core/-/flagpack-core-0.0.38.tgz#d253fb87b43ac55b088e7633b50f6ffc43eaf6a4"
+  integrity sha512-xQKiu27ots0KzCQ6xgLU+7blPLV7XtIUL0jir7sMi/KkEzAj34keJskXn7TwoSnDutoiMfwfUx/m9ijQV01phw==
 
 flush-write-stream@^1.0.0:
   version "1.1.1"
