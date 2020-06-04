@@ -6,7 +6,7 @@ import { isoToCountryCode, imageUrl } from 'flagpack-core'
 interface Props {
   code: String,
   size?: String,
-  dropshadow?: Boolean,
+  hasDropShadow?: Boolean,
   hasBorder?: Boolean,
   gradient?: 'top-down' | 'real-circular' | 'real-linear',
   hasBorderRadius?: Boolean,
@@ -20,7 +20,7 @@ class Flag extends React.PureComponent<Props, void> {
       gradient = '',
       size = 'l',
       hasBorder = false,
-      dropshadow = false,
+      hasDropShadow = false,
       hasBorderRadius = true,
       code = 'NL',
       customBorderRadius,
@@ -37,9 +37,9 @@ class Flag extends React.PureComponent<Props, void> {
           ${gradient}
           size-${size}
           ${hasBorder ? 'border' : ''}
-          ${dropshadow ? 'dropshadow' : ''}
+          ${hasDropShadow ? 'drop-shadow' : ''}
           ${hasBorderRadius ? 'border-radius' : ''}
-          ${className}`.replace(/\s\s+/g, ' ').trim()
+          ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`
       }>
         <img src={imageUrl(isoToCountryCode(code).toUpperCase(), size.toLowerCase())}/>
       </div>

@@ -54,7 +54,6 @@
     "copy-webpack-plugin": "^4.5.3",
     "node-sass": "^4.12.0",
     "postcss-clean": "^1.1.0",
-    "react": "^16.8.*",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-babili": "^3.1.1",
     "rollup-plugin-commonjs": "^10.0.0",
@@ -71,6 +70,9 @@
     "typescript": "^3.4.5",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.*"
   },
   "authors": [
     {
@@ -90,6 +92,6 @@
     }
   ],
   "dependencies": {
-    "flagpack-core": "^0.0.39"
+    "flagpack-core": "^0.0.41"
   }
 }
