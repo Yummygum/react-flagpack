@@ -1,11 +1,11 @@
 {
   "name": "react-flagpack",
-  "description": "A React flag pack",
+  "description": "Gorgeous flag components for your React project.",
   "version": "0.0.27",
   "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yummygum/react-flag-pack.git"
+    "url": "git+https://github.com/Yummygum/react-flagpack.git"
   },
   "keywords": [
     "react",
@@ -23,16 +23,12 @@
   "main": "dist/react-flag-rollup.cjs.js",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Yummyg4um/react-flag-pack/issues"
+    "url": "https://github.com/Yummygum/react-flagpack/issues"
   },
-  "homepage": "https://github.com/Yummygum/react-flag-pack/#readme",
+  "homepage": "https://flagpack.xyz",
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production rollup -c",
     "dev": "rollup -cw",
-    "test": "echo 'tests here'",
-    "prepublish": "npm test && npm version patch",
-    "publish": "npm run build && git add -A dist",
-    "postpublish": "git push && git push --tags"
+    "build": "rm -rf dist && NODE_ENV=production rollup -c"
   },
   "browserslist": [
     "> 1%",
@@ -51,7 +47,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
-    "copy-webpack-plugin": "^4.5.3",
+    "copy-webpack-plugin": "^6.0.3",
     "node-sass": "^4.12.0",
     "postcss-clean": "^1.1.0",
     "rollup-plugin-babel": "^4.3.2",
@@ -68,8 +64,8 @@
     "rollup-watch": "latest",
     "tslib": "^1.9.3",
     "typescript": "^3.4.5",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "peerDependencies": {
     "react": "^16.8.*"
