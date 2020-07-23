@@ -1,4 +1,4 @@
-# React Flag Pack
+# React Flagpack
 
 > A project made by Yummygum
 
@@ -20,7 +20,7 @@ Use in JSX:
   code="NL"
   gradient="real-linear"
   size="m"
-  dropshadow
+  hasDropShadow
 />
 ```
 </br>
@@ -32,10 +32,9 @@ Use in JSX:
 | country code |  String | true | - | see all codes |
 | size |  String | false | l | 's', 'm' or 'l' |
 | className |  String | false | - | - |
-| dropshadow |  boolean | false | false | - |
+| hasDropShadow |  boolean | false | false | - |
 | hasBorder |  boolean | false | true | - |
 | hasBorderRadius | boolean | false | true | - |
-| customBorderRadius |  String | false | - | - |
 | gradient |  String | false | '' | 'top-down', 'real-linear' or 'real-circular' |
 
 

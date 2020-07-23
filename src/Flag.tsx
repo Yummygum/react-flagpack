@@ -6,32 +6,27 @@ import { isoToCountryCode, imageUrl } from 'flagpack-core'
 interface Props {
   code: String,
   size?: String,
-  hasDropShadow?: Boolean,
-  hasBorder?: Boolean,
   gradient?: 'top-down' | 'real-circular' | 'real-linear',
+  hasBorder?: Boolean,
+  hasDropShadow?: Boolean,
   hasBorderRadius?: Boolean,
-  customBorderRadius?: any,
   className?: String
 }
 
 class Flag extends React.PureComponent<Props, void> {
   public render() {
     const {
-      gradient = '',
+      code = 'NL',
       size = 'l',
-      hasBorder = false,
+      gradient = '',
+      hasBorder = true,
       hasDropShadow = false,
       hasBorderRadius = true,
-      code = 'NL',
-      customBorderRadius,
       className
     } = this.props
 
     return (
       <div
-        style={{
-          borderRadius: customBorderRadius
-        }}
         className={
           `flag
           ${gradient}

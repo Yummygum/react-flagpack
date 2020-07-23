@@ -6,6 +6,7 @@
   position: absolute;
   display: block;
   mix-blend-mode: overlay;
+  box-sizing: border-box;
 }
 
 // Flag
@@ -13,6 +14,7 @@
   display: inline-block;
   overflow: hidden;
   position: relative;
+  box-sizing: border-box;
 
   &.size {
     &-s {
@@ -25,6 +27,12 @@
 
       &.border-radius {
         border-radius: 1px;
+
+        &.border {
+          &::before {
+            border-radius: 1px;
+          }
+        }
       }
     }
 
@@ -38,6 +46,12 @@
 
       &.border-radius {
         border-radius: 1.5px;
+
+        &.border {
+          &::before {
+            border-radius: 1.5px;
+          }
+        }
       }
     }
 
@@ -51,6 +65,12 @@
 
       &.border-radius {
         border-radius: 2px;
+
+        &.border {
+          &::before {
+            border-radius: 2px;
+          }
+        }
       }
     }
   }
@@ -58,8 +78,6 @@
   &.border {
     &::before {
       @include before-styling();
-      width: calc(100% - 2px);
-      height: calc(100% - 2px);
       border: 1px solid rgba(0, 0, 0, .5);
       mix-blend-mode: overlay;
     }
