@@ -25,6 +25,8 @@ class Flag extends React.PureComponent<Props, void> {
       className
     } = this.props
 
+    const url = imageUrl(isoToCountryCode(code).toUpperCase(), size.toLowerCase())
+
     return (
       <div
         className={
@@ -36,7 +38,7 @@ class Flag extends React.PureComponent<Props, void> {
           ${hasBorderRadius ? 'border-radius' : ''}
           ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`
       }>
-        <img src={imageUrl(isoToCountryCode(code).toUpperCase(), size.toLowerCase())}/>
+        <img src={url.default || url }/>
       </div>
     )
   }
