@@ -4,13 +4,13 @@ import './Flag.scss'
 import { isoToCountryCode, imageUrl } from 'flagpack-core'
 
 interface Props {
-  code: String,
-  size?: String,
+  code: string,
+  size?: string,
   gradient?: 'top-down' | 'real-circular' | 'real-linear',
-  hasBorder?: Boolean,
-  hasDropShadow?: Boolean,
-  hasBorderRadius?: Boolean,
-  className?: String
+  hasBorder?: boolean,
+  hasDropShadow?: boolean,
+  hasBorderRadius?: boolean,
+  className?: string
 }
 
 class Flag extends React.PureComponent<Props, void> {
@@ -37,7 +37,7 @@ class Flag extends React.PureComponent<Props, void> {
           ${hasDropShadow ? 'drop-shadow' : ''}
           ${hasBorderRadius ? 'border-radius' : ''}
           ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`
-      }>
+        }>
         <img src={url.default || url }/>
       </div>
     )

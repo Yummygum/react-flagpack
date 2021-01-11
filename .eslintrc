@@ -1,0 +1,192 @@
+/**
+ * Copyright (c) 2021 Yummygum - CC BY-NC-ND
+ * This file is licensed separately from the rest of the project.
+ * This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ */
+ {
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "import",
+    "jest"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "react/jsx-pascal-case": 2,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prefer-arrow-callback": 2,
+    "no-sequences": "error",
+    "no-eval": "error",
+    "no-return-await": "error",
+    "no-shadow": "error",
+    "no-throw-literal": "error",
+    "no-extra-bind": "error",
+    "no-var": "error",
+    "prefer-const": 1,
+    "eqeqeq": "error",
+    "use-isnan": "error",
+    "jsx-a11y": 0,
+    "indent": ["error", 2],
+    "semi": [
+      2,
+      "never"
+    ],
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "comma-style": [
+      2,
+      "last"
+    ],
+    "curly": 2,
+    "func-names": 2,
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ],
+    "guard-for-in": 2,
+    "wrap-iife": 2,
+    "no-undef": 2,
+    "new-cap": 2,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "no-trailing-spaces": 2,
+    "comma-dangle": 0,
+    "max-len": [
+      2,
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-underscore-dangle": 0,
+    "strict": 0,
+    "no-useless-rename": 2,
+    "no-new-object": 2,
+    "no-array-constructor": 2,
+    "global-require": 0,
+    "prefer-spread": 1,
+    "react/button-has-type": 0,
+    "react/self-closing-comp": 1,
+    "react/no-deprecated": 1,
+    "react/require-default-props": 0,
+    "react/jsx-key": 1,
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-direct-mutation-state": 1,
+    "react/no-typos": 2,
+    "react/no-string-refs": 1,
+    "react/jsx-equals-spacing": [
+      2,
+      "never"
+    ],
+    "react/boolean-prop-naming": [
+      "warn",
+      {
+        "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".tsx"
+        ]
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "react/no-array-index-key": 0,
+    "no-console": [
+      1,
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "no-extend-native": 2,
+    "react/jsx-max-props-per-line": [
+      2,
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
+    ],
+    "function-paren-newline": [
+      2,
+      "multiline"
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true,
+        "minProperties": 3,
+        "consistent": true
+      }
+    ],
+    "import/no-dynamic-require": 2,
+    "no-nested-ternary": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/no-did-update-set-state": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "no-use-before-define": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.ts","*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "@typescript-eslint/no-use-before-define": "warn",
+        "@typescript-eslint/type-annotation-spacing": "error",
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "react/prop-types": "off"
+      }
+    }
+  ]
+}
