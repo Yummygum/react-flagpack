@@ -8,8 +8,8 @@
 .gitattributes
 .jscsrc
 .npmignore
-.rpt2_cache/
-.vscode/
+.rpt2_cache
+.vscode
 .env
 
 src

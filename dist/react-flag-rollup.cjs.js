@@ -36,8 +36,6 @@ styleInject(css_248z);
 class Flag extends React.PureComponent {
     render() {
         const { code = 'NL', size = 'l', gradient = '', hasBorder = true, hasDropShadow = false, hasBorderRadius = true, className } = this.props;
-        console.log(flagpackCore.imageUrl(flagpackCore.isoToCountryCode(code).toUpperCase(), size.toLowerCase()));
-        console.log(flagpackCore.isoToCountryCode(code));
         const url = flagpackCore.imageUrl(flagpackCore.isoToCountryCode(code).toUpperCase(), size.toLowerCase());
         return (React.createElement("div", { className: `flag
           ${gradient}
