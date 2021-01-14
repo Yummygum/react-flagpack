@@ -2,7 +2,7 @@
 
 ## Bug fixes
 
-Issues can be found on our [GitHub issues](https://github.com/yummygum/flagpack-core/issues) page. Found a bug? Let us know! Report the bug by [creating a new issue](https://github.com/Yummygum/react-flagpack/issues/new/choose). Make sure to check the issues page before creating a new bug issue to prevent duplicate issues. Once you start fixing a bug, post your intent on the issue to prevent others diving in at the same time.
+Issues can be found on our [GitHub issues](https://github.com/yummygum/react-flagpack/issues) page. Found a bug? Let us know! Report the bug by [creating a new issue](https://github.com/Yummygum/react-flagpack/issues/new/choose). Make sure to check the issues page before creating a new bug issue to prevent duplicate issues. Once you start fixing a bug, post your intent on the issue to prevent others diving in at the same time.
 
 ## New features
 
