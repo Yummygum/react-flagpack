@@ -1,6 +1,13 @@
-# React Flagpack
+# Flagpack
 
-> A project made by Yummygum
+Flagpack contains 260+ flag icons to easily use within your code project. Flagpack is an open source project and available for JavaScript frameworks/libraries Angular, Vue and React.
+
+![Flagpack. 260+ easily implementable flag icons to use in your design or code project. Open Source. Available for Sketch, Figma, Angular, Vue, and React. [www.flagpack.xyz](https://www.flagpack.xyz). Made with love by Yummygum. Graphic showing a list with the flags of Argentina, Croatia, Estonia, Kenia, Netherlands, and Scotland.](https://flagpack.xyz/meta-image.png)
+
+[View documentation on flagpack.xyz](https://flagpack.xyz/docs/)
+
+## react-flagpack
+Flagpack for React is created using React v16.8. The Flagpack component has not been tested for compatibility with older version of React.
 
 ## Installation
 
@@ -9,13 +16,15 @@ npm install react-flagpack --save
 ```
 
 ## Usage
+
+### Defining the component
+Import the Flagpack component into any of your project's React components.
 ```js
-// use own name as variable
 import Flag from 'react-flagpack'
 ```
 
-Use in JSX:
-```html
+### Use in JSX
+```jsx
 <Flag
   code="NL"
   gradient="real-linear"
@@ -23,28 +32,30 @@ Use in JSX:
   hasDropShadow
 />
 ```
-</br>
 
-## Available component configurations
+## Available component configurations — Props
 
-| key   | value   | required | default | format |
+| Key   | Value   | Required | Default | Format |
 |-------|-------|------|------|------|
-| country code |  String | true | - | see all codes |
-| size |  String | false | l | 's', 'm' or 'l' |
+| code |  String | false | 'NL' | [See all codes](https://flagpack.xyz/docs/flag-index/) |
+| size |  String | false | 'L' | 'S', 'M' or 'L' |
 | className |  String | false | - | - |
-| hasDropShadow |  boolean | false | false | - |
-| hasBorder |  boolean | false | true | - |
-| hasBorderRadius | boolean | false | true | - |
+| hasDropShadow |  Boolean | false | false | - |
+| hasBorder |  Boolean | false | true | - |
+| hasBorderRadius | Boolean | false | true | - |
 | gradient |  String | false | '' | 'top-down', 'real-linear' or 'real-circular' |
 
 
-## Build Dist
+## Build
 ```bash
 # install dependencies
 npm install
 
 # build for prod
 npm run build
+
+# build with watcher for dev
+npm run dev
 ```
 
 ## Releasing
@@ -62,3 +73,21 @@ npm publish
 ```
 
 When you're confident with the release, make sure the version tag is also released at GitHub.
+
+## Support
+
+[Frequently Asked Questions](https://flagpack.xyz/support/)
+
+[Documentation](https://flagpack.xyz/docs/)
+
+## Releases
+
+You can find a changelog of Flagpack's releases on the [Releases page](https://github.com/Yummygum/react-flagpack/releases) on GitHub.
+
+## Contribute
+
+If you're interested in contributing to this project, great! Please see the [contributing document](CONTRIBUTING.md).
+
+## License
+
+Flagpack is an open source project published under a [MIT license](LICENSE).
