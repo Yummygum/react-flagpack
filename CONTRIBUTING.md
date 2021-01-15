@@ -16,7 +16,7 @@ If a PR introduces or changes API, mention one of the Yummygum team members to m
 
 Follow these steps to get your code PR-ready:
 
-1. Fork the `react-flagpack` repo (and also the `flagpack-core` if you want to make changes to the core)
+1. Fork the `react-flagpack` repo (and also the [`flagpack-core`](https://github.com/yummygum/flagpack-core/) if you want to make changes to the core)
 2. Clone your fork locally
 3. Add your code
 4. If this is a feature that requires doc changes, mention one of the Yummygum team members
