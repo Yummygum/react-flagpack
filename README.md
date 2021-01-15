@@ -2,7 +2,7 @@
 
 Flagpack contains 260+ flag icons to easily use within your code project. Flagpack is an open source project and available for JavaScript frameworks/libraries Angular, Vue and React.
 
-![Flagpack. 260+ easily implementable flag icons to use in your design or code project. Open Source. Available for Sketch, Figma, Angular, Vue, and React. [www.flagpack.xyz](http://www.flagpack.xyz). Made with love by Yummygum. Graphic showing a list with the flags of Argentina, Croatia, Estonia, Kenia, Netherlands, and Scotland.](https://flagpack.xyz/meta-image.png)
+![Flagpack. 260+ easily implementable flag icons to use in your design or code project. Open Source. Available for Sketch, Figma, Angular, Vue, and React. [www.flagpack.xyz](https://www.flagpack.xyz). Made with love by Yummygum. Graphic showing a list with the flags of Argentina, Croatia, Estonia, Kenia, Netherlands, and Scotland.](https://flagpack.xyz/meta-image.png)
 
 [View documentation on flagpack.xyz](https://flagpack.xyz/docs/)
 
@@ -24,7 +24,7 @@ import Flag from 'react-flagpack'
 ```
 
 ### Use in JSX
-```html
+```jsx
 <Flag
   code="NL"
   gradient="real-linear"
@@ -76,9 +76,9 @@ When you're confident with the release, make sure the version tag is also releas
 
 ## Support
 
-[Frequently Asked Questions](http://dev.flagpack.xyz/support/)
+[Frequently Asked Questions](https://flagpack.xyz/support/)
 
-[Documentation](http://dev.flagpack.xyz/docs/)
+[Documentation](https://flagpack.xyz/docs/)
 
 ## Releases
 
