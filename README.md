@@ -54,7 +54,7 @@ npm version <release_type>
 ```
 This will update the version number in the `package.json`, and will add a git tag automatically. Next you'll need to push the git tag to the remote.
 ```
-git push --tags origin master
+git push --tags origin main
 ```
 After that you'll need to publish to npm.
 ```
