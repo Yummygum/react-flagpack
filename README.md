@@ -23,6 +23,17 @@ Import the Flagpack component into any of your project's React components.
 import Flag from 'react-flagpack'
 ```
 
+### if (isProjectNextjS) {
+
+Make sure you have an SVG loader installed in your project. If there is none you could add this
+package to your project: https://www.npmjs.com/package/next-images 
+Add this with the following steps:
+step 1: `npm install next-images`
+step 2: Create next.config.js file
+step 3: Add `const withImages = require('next-images');module.exports = withImages();` to the config file.
+
+}
+
 ### Use in JSX
 ```jsx
 <Flag
