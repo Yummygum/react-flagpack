@@ -4687,8 +4687,10 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-flagpack-core@../flagpack-core:
+flagpack-core@^1.0.0:
   version "1.0.0"
+  resolved "https://registry.yarnpkg.com/flagpack-core/-/flagpack-core-1.0.0.tgz#1006b7efa4cc8f1d04dfe8e63cbc1e942b909a38"
+  integrity sha512-xKNFPkF+sKFY+pP7fsHD8KkuHKl5ZUX8eY2Vzt7lNv9m0ndtchzLx+gdZrJd/3QZfTyi9U40y9WVYAEBy0w++g==
 
 flat-cache@^3.0.4:
   version "3.0.4"
