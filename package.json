@@ -83,7 +83,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "peerDependencies": {
-    "react": "^16.8.* | ^17.*"
+    "react": "^16.8.* || ^17.*"
   },
   "authors": [
     {
