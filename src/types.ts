@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface FlagProps {
+export interface Props {
   code: string;
   size?: string;
   gradient?: 'top-down' | 'real-circular' | 'real-linear';
@@ -10,5 +10,5 @@ export interface FlagProps {
   className?: string;
 }
 
-declare class Flag extends React.Component<FlagProps, void> {}
+declare class Flag extends React.Component<Props, void> {}
 export default Flag

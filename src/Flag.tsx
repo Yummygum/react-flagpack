@@ -1,9 +1,9 @@
-import { imageUrl, isoToCountryCode } from 'flagpack-core'
 import * as React from 'react'
 import './Flag.scss'
-import { FlagProps } from './types'
+import { imageUrl, isoToCountryCode } from 'flagpack-core'
+import { Props } from './types'
 
-class Flag extends React.PureComponent<FlagProps, void> {
+class Flag extends React.PureComponent<Props, void> {
   public render() {
     const {
       code = 'NL',
