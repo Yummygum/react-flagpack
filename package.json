@@ -103,6 +103,6 @@
     }
   ],
   "dependencies": {
-    "flagpack-core": "^1.0.0"
+    "flagpack-core": "^2.0.0"
   }
 }

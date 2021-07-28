@@ -4788,9 +4788,10 @@
     "locate-path" "^5.0.0"
     "path-exists" "^4.0.0"
 
-"flagpack-core@file:../flagpack-core":
-  "resolved" "file:../flagpack-core"
-  "version" "1.1.2"
+"flagpack-core@^2.0.0":
+  "integrity" "sha512-m1nXIT+BFgIpAlBRAJ/AUIIW5Mx32EsSVU34nZlT58v5hVqo52ZwBibV7LVWG6vXU4ij5vwCI5BUOCd0+cb6jA=="
+  "resolved" "https://registry.npmjs.org/flagpack-core/-/flagpack-core-2.0.0.tgz"
+  "version" "2.0.0"
 
 "flat-cache@^3.0.4":
   "integrity" "sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg=="
