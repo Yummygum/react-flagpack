@@ -26,10 +26,12 @@
   "bugs": {
     "url": "https://github.com/Yummygum/react-flagpack/issues"
   },
+  "type": "module",
   "homepage": "https://flagpack.xyz",
   "scripts": {
     "dev": "rollup -cw",
-    "build": "rimraf dist && cross-env NODE_ENV=production rollup -c"
+    "build": "rimraf dist && cross-env NODE_ENV=production rollup -c",
+    "generate-flags": "node cli/generateFlags.js"
   },
   "browserslist": [
     "> 1%",
@@ -77,6 +79,7 @@
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-typescript2": "^0.21.1",
     "rollup-watch": "latest",
+    "ts-node": "^10.2.0",
     "tslib": "^1.9.3",
     "typescript": "^3.4.5",
     "webpack": "^4.43.0",
