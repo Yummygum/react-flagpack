@@ -12,16 +12,21 @@ countryCodeList.map((country) => {
 const sizes = ['s', 'm', 'l']
 
 const createDist = () => {
-  // TODO: Remove dist/flags folder before creating a new one
+  // Remove folder before creating a new one
+  // Clean the dist
+
+  createFlagsDirectory()
+  createSizeDirectoies()
 
   // Create flags folder and subdirectories
-  fs.mkdir(distDir, (err) => {
-    if(err) throw err
-    console.log('created flags folder')
-    createSizeFolders()
-  })
+  function createFlagsDirectory() {
+    fs.mkdir(distDir, (err) => {
+      if(err) throw err
+      console.log('created flags folder')
+    })
+  }
 
-  function createSizeFolders() {
+  function createSizeDirectoies() {
     sizes.forEach((size) => {
       fs.mkdir(`${distDir}/${size}`, (err) => {
         if(err) throw err
