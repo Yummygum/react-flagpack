@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { countryCodeList } from 'flagpack-core/lib/countryCodeList.js'
+const countryCodeList = JSON.parse(fs.readFileSync('node_modules/flagpack-core/countryCodeList.json'))
 
 const distDir = './dist/flags'
 
@@ -12,7 +12,6 @@ countryCodeList.map((country) => {
 const sizes = ['s', 'm', 'l']
 
 const createDist = () => {
-  // Remove folder before creating a new one
   // Clean the dist
 
   createFlagsDirectory()
@@ -69,7 +68,17 @@ const copyFlags = () => {
           // Iterable array from
           const values = [alphaTwoValue, alphaThreeValue, numericValue]
 
+          // if(alphaTwoValue === undefined ||
+          //   alphaThreeValue === undefined ||
+          //   numericValue === undefined) {
+          //   }
+          console.log(`Flag for ${fileNameBase}: alpha2: ${alphaTwoValue} ${alphaThreeValue ? `| alpha3: ${alphaThreeValue}`: ''} ${numericValue ? `| numeric: ${numericValue}`: ''}`)
+
           values.forEach((value) => {
+            if (value === undefined){
+              return
+            }
+
             fs.copyFile(
               `${sourceDirPrefix}/${size}/${fileName}`,
               `${distDir}/${size}/${value}${suffix}`,
