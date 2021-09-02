@@ -7,7 +7,6 @@ const countryObject = {}
 countryCodeList.map((country) => {
   countryObject[country.alpha2] = country
 })
-// console.log(countryObject)
 
 const sizes = ['s', 'm', 'l']
 
@@ -68,10 +67,6 @@ const copyFlags = () => {
           // Iterable array from
           const values = [alphaTwoValue, alphaThreeValue, numericValue]
 
-          // if(alphaTwoValue === undefined ||
-          //   alphaThreeValue === undefined ||
-          //   numericValue === undefined) {
-          //   }
           console.log(`Flag for ${fileNameBase}: alpha2: ${alphaTwoValue} ${alphaThreeValue ? `| alpha3: ${alphaThreeValue}`: ''} ${numericValue ? `| numeric: ${numericValue}`: ''}`)
 
           values.forEach((value) => {
