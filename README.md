@@ -27,7 +27,7 @@ Flagpack for React is created using React v16.8. The Flagpack component has not 
 ## Installation
 
 ```bash
-npm install react-flagpack --save
+$: npm install react-flagpack --save
 ```
 
 ## Usage

@@ -18,39 +18,39 @@ If you wish to run the package locally, go through the following steps:
 
 1. Fork the `react-flagpack` repo and clone your fork to your system:
 ```bash
-git clone https://github.com/{your-username}/react-flagpack.git
+$: git clone https://github.com/{your-username}/react-flagpack.git
 ```
 2. Install the package
 
 ```bash
-npm install
+$: npm install
 ```
 
 3. Run npm link to create a local instance of the package
 ```bash
-npm link
+$: npm link
 ```
 
 4. Now install the app you're using flagpack in, for this instance we'll be using [a React Next App](https://nextjs.org/docs/api-reference/create-next-app):
 ```bash
-npx create-next-app
+$: npx create-next-app
 ```
 
 5. use `cd` to move into the app directory and use `npm link` to add your local instance of `react-flagpack`
 ```bash
 # move into directory
-cd next-app
+$: cd next-app
 
 # add local instance of react-flagpack
-npm link react-flagpack
+$: npm link react-flagpack
 ```
 
 6. Now in the `react-flagpack` run the dev script so your changes are updated automatically
 ```bash
-npm run dev
+$: npm run dev
 ```
 
-7. You're ready to go to develop on the `react-flagpack` package!
+7. You're now ready to go to develop on the `react-flagpack` package!
 ## Building the package
 Building the package should only ever be needed if there are changes from the `flagpack-core` devDependency. `react-flagpack`
  will be built based on the `CountryCodeList.json` in `flagpack-core`.
@@ -60,7 +60,7 @@ To build `react-flagpack` go through the following steps:
 1. Update `flagpack-core` to the latest version
 2. Run the `build` script in `react-flagpack`
 ```bash
-npm run build
+$: npm run build
 ```
 
 
@@ -70,15 +70,15 @@ If you have proper credentials, like a @yummygum team member, you can release a 
 To release a new version you'll need to make sure all changes commits are done and pushed. Please follow the [semver](https://semver.org/) guidelines to decide what kind of release type your changes would translate to.
 
 ```
-npm version <release_type>
+$: npm version <release_type>
 ```
 This will update the version number in the `package.json`, and will add a git tag automatically. Next you'll need to push the git tag to the remote.
 ```
-git push --tags origin main
+$: git push --tags origin main
 ```
 After that you'll need to publish to npm.
 ```
-npm publish
+$: npm publish
 ```
 
 When you're confident with the release, make sure the version tag is also released at GitHub.
