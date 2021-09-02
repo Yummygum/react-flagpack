@@ -67,7 +67,7 @@ $: npm run build
 ## Releasing
 If you have proper credentials, like a @yummygum team member, you can release a new version of `react-flagpack`.
 
-To release a new version you'll need to make sure all changes commits are done and pushed. Please follow the [semver](https://semver.org/) guidelines to decide what kind of release type your changes would translate to.
+To release a new version you'll need to make sure all changes commits are done and pushed within the desired version branch. Please follow the [semver](https://semver.org/) guidelines to decide what kind of release type your changes would translate to.
 
 ```
 $: npm version <release_type>
