@@ -36,7 +36,7 @@ $: npm link
 $: npx create-next-app
 ```
 
-5. use `cd` to move into the app directory and use `npm link` to add your local instance of `react-flagpack`
+5. Use `cd` to move into the app directory and use `npm link` to add your local instance of `react-flagpack`
 ```bash
 # move into directory
 $: cd next-app
