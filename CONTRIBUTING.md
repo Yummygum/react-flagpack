@@ -12,14 +12,78 @@ Upcoming new features can be found on our [GitHub issues](https://github.com/yum
 
 If a PR introduces or changes API, mention one of the Yummygum team members to make sure it'll be processed into the [website docs](https://flagpack.xyz/docs/).
 
-## Development
+
+# Development
+If you wish to run the package locally, go through the following steps:
+
+1. Fork the `react-flagpack` repo and clone your fork to your system:
+```bash
+$: git clone https://github.com/{your-username}/react-flagpack.git
+```
+2. Install the package
+
+```bash
+$: npm install
+```
+
+3. Run npm link to create a local instance of the package
+```bash
+$: npm link
+```
+
+4. Now install the app you're using flagpack in, for this instance we'll be using [a React Next App](https://nextjs.org/docs/api-reference/create-next-app):
+```bash
+$: npx create-next-app
+```
+
+5. Use `cd` to move into the app directory and use `npm link` to add your local instance of `react-flagpack`
+```bash
+# move into directory
+$: cd next-app
+
+# add local instance of react-flagpack
+$: npm link react-flagpack
+```
+
+6. Now in the `react-flagpack` run the dev script so your changes are updated automatically
+```bash
+$: npm run dev
+```
+
+7. You're now ready to go to develop on the `react-flagpack` package!
+## Building the package
+Building the package should only ever be needed if there are changes from the `flagpack-core` devDependency. `react-flagpack`
+ will be built based on the `CountryCodeList.json` in `flagpack-core`.
+
+To build `react-flagpack` go through the following steps:
+
+1. Update `flagpack-core` to the latest version
+2. Run the `build` script in `react-flagpack`
+```bash
+$: npm run build
+```
+
+
+## Releasing
+If you have proper credentials, like a @yummygum team member, you can release a new version of `react-flagpack`.
+
+To release a new version you'll need to make sure all changes commits are done and pushed within the desired version branch. Please follow the [semver](https://semver.org/) guidelines to decide what kind of release type your changes would translate to.
+
+```
+$: npm version <release_type>
+```
+This will update the version number in the `package.json`, and will add a git tag automatically. Next you'll need to push the git tag to the remote.
+```
+$: git push --tags origin main
+```
+After that you'll need to publish to npm.
+```
+$: npm publish
+```
+
+When you're confident with the release, make sure the version tag is also released at GitHub.
 
 Follow these steps to get your code PR-ready:
 
-1. Fork the `react-flagpack` repo (and also the [`flagpack-core`](https://github.com/yummygum/flagpack-core/) if you want to make changes to the core)
-2. Clone your fork locally
-3. Add your code
-4. If this is a feature that requires doc changes, mention one of the Yummygum team members
-5. Make sure your code is linted and formatted nicely according to the style guide
-6. Create a PR and mention what changes you made
-7. You're ready!
+- Make sure your code is linted and formatted nicely according to the style guide
+- Create a PR and mention what changes you made
