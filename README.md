@@ -1,6 +1,6 @@
 # Flagpack
 
-Flagpack contains 260+ flag icons to easily use within your code project. Flagpack is an open source project and available for JavaScript frameworks/libraries Angular, Vue and React.
+Flagpack contains 250+ flag icons to easily use within your code project. Flagpack is an open source project and available for JavaScript frameworks/libraries React, Vue and Svelte.
 
 ![Flagpack. 260+ easily implementable flag icons to use in your design or code project. Open Source. Available for Sketch, Figma, Angular, Vue, and React. [www.flagpack.xyz](https://www.flagpack.xyz). Made with love by Yummygum. Graphic showing a list with the flags of Argentina, Croatia, Estonia, Kenia, Netherlands, and Scotland.](https://flagpack.xyz/meta-image.png)
 
@@ -22,12 +22,12 @@ Flagpack contains 260+ flag icons to easily use within your code project. Flagpa
   </a>
 </p>
 
-Flagpack for React is created using React v16.8. The Flagpack component has not been tested for compatibility with older version of React.
+Flagpack for React is created using React v16.8. The Flagpack component has not been tested for compatibility with older versions of React.
 
 ## Installation
 
 ```bash
-npm install react-flagpack --save
+$: npm install react-flagpack --save
 ```
 
 ## Usage
@@ -37,17 +37,6 @@ Import the Flagpack component into any of your project's React components.
 ```js
 import Flag from 'react-flagpack'
 ```
-
-### Usage in NextJS {
-
-Make sure you have an SVG loader installed in your project. If there is none you could add this
-package to your project: https://www.npmjs.com/package/next-images 
-Add this with the following steps:
-- step 1: `npm install next-images`
-- step 2: Create next.config.js file
-- step 3: Add `const withImages = require('next-images');module.exports = withImages();` to the config file
-
-When importing the flag make sure it's dynamic and ssr is false via : `const Flag = dynamic(() => import('react-flagpack'), { ssr: false })`
 
 ### Use in JSX
 ```jsx
@@ -71,35 +60,6 @@ When importing the flag make sure it's dynamic and ssr is false via : `const Fla
 | hasBorderRadius | Boolean | false | true | - |
 | gradient |  String | false | '' | 'top-down', 'real-linear' or 'real-circular' |
 
-
-## Build
-```bash
-# install dependencies
-npm install
-
-# build for prod
-npm run build
-
-# build with watcher for dev
-npm run dev
-```
-
-## Releasing
-To release a new version you'll need to make sure all changes commits are done and pushed. After that you'll need to decide which release type you want to use. The release types are; patch (0.0.1), minor (0.1.0), or major (1.0.0).
-```
-npm version <release_type>
-```
-This will update the version number in the `package.json`, and will add a git tag automatically. Next you'll need to push the git tag to the remote.
-```
-git push --tags origin main
-```
-After that you'll need to publish to npm.
-```
-npm publish
-```
-
-When you're confident with the release, make sure the version tag is also released at GitHub.
-
 ## Support
 
 [Frequently Asked Questions](https://flagpack.xyz/support/)
@@ -112,7 +72,7 @@ You can find a changelog of Flagpack's releases on the [Releases page](https://g
 
 ## Contribute
 
-If you're interested in contributing to this project, great! Please see the [contributing document](CONTRIBUTING.md).
+If you're interested in contributing to this project, great! Please see the [contributing document](CONTRIBUTING.md) how to set up you up.
 
 ## License
 
