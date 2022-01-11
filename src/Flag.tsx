@@ -31,7 +31,7 @@ const Flag: React.FC<Props> = ({
     ${hasBorderRadius ? 'border-radius' : ''}
     ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`
     }>
-    <img src={require(`./flags/${size}/${code}.svg`).default} />
+    <img src={require(`./flags/${size}/${code}.svg`)} />
   </div>
 )
 

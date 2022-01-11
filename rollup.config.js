@@ -45,7 +45,7 @@ export default {
   external: ['react', 'flagpack-core'],
   input: './src/main.ts',
   output: {
-    file: 'dist/react-flag-rollup.cjs.js',
+    file: 'dist/react-flag-rollup.cjs',
     format: 'cjs',
     exports: 'auto'
   }

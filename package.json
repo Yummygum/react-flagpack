@@ -20,7 +20,7 @@
   "files": [
     "dist/*"
   ],
-  "main": "dist/react-flag-rollup.cjs.js",
+  "main": "dist/react-flag-rollup.cjs",
   "types": "dist/main.d.ts",
   "license": "MIT",
   "bugs": {
