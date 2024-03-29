@@ -3,6 +3,7 @@
   "description": "Gorgeous flag components for your React project.",
   "version": "1.2.0",
   "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yummygum/react-flagpack.git"
@@ -20,8 +21,8 @@
   "files": [
     "dist/*"
   ],
-  "main": "dist/react-flag-rollup.cjs.js",
-  "types": "dist/main.d.ts",
+  "main": "dist/react-flag.cjs",
+  "types": "dist/Flag.d.ts",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Yummygum/react-flagpack/issues"
@@ -29,9 +30,9 @@
   "type": "module",
   "homepage": "https://flagpack.xyz",
   "scripts": {
-    "dev": "rollup -cw",
-    "build": "rimraf dist && cross-env NODE_ENV=production rollup -c && npm run generate-flags",
-    "generate-flags": "node cli/generateFlags.js"
+    "dev": "vite",
+    "build": "rimraf dist && tsc && vite build && npm run generate-flags",
+    "generate-flags": "tsx cli/generateFlags.ts"
   },
   "browserslist": [
     "> 1%",
@@ -39,21 +40,15 @@
     "not ie <= 8"
   ],
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/eslint-parser": "7.11.3",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
-    "@types/react": "^16.8.18",
-    "@typescript-eslint/eslint-plugin": "4.11.1",
-    "@typescript-eslint/parser": "4.11.1",
+    "@babel/core": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^9.5.1",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-1": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "copy-webpack-plugin": "^6.0.3",
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "eslint-config-airbnb": "18.2.1",
@@ -62,32 +57,27 @@
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
-    "flagpack-core": "^2.0.0",
-    "node-sass": "^4.12.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "flagpack-core": "1.1.2",
+    "next": "^14.1.4",
     "postcss-clean": "^1.1.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.36.1",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-babel-minify": "^10.0.0",
-    "rollup-plugin-babili": "^3.1.1",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-node-resolve": "^5.0.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-serve": "^1.1.0",
-    "rollup-plugin-typescript2": "^0.21.1",
-    "rollup-watch": "latest",
-    "ts-node": "^10.2.0",
+    "sass": "^1.72.0",
+    "ts-node": "^10.9.2",
     "tslib": "^1.9.3",
-    "typescript": "^3.4.5",
-    "webpack": "^4.43.0",
-    "webpack-dev-server": "^3.11.0"
+    "tsx": "^4.7.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.8.1"
   },
   "peerDependencies": {
-    "react": "^16.8.* || ^17.*"
+    "next": "^14.1.4",
+    "react": "^16.8.* || ^17.* || ^18.*"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
   },
   "authors": [
     {
@@ -104,6 +94,12 @@
       "name": "Yummygum",
       "social": "@yummygum",
       "url": "https://yummygum.com"
+    },
+    {
+      "name": "Zoey Frisart",
+      "social": "@zoeyfrisart",
+      "url": "https://zoey-frisart.com"
     }
-  ]
+  ],
+  "dependencies": {}
 }
