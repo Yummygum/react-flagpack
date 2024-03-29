@@ -1,6 +1,7 @@
+import { Flags } from 'flagpack-core';
 import * as React from 'react';
 interface Props {
-    code: string;
+    code: Flags;
     size?: string;
     gradient?: '' | 'top-down' | 'real-circular' | 'real-linear';
     hasBorder?: boolean;

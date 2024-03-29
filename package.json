@@ -1,7 +1,7 @@
 {
   "name": "react-flagpack",
   "description": "Gorgeous flag components for your React project.",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
   "sideEffects": false,
   "repository": {
@@ -34,6 +34,9 @@
     "build": "rimraf dist && tsc && vite build && npm run generate-flags",
     "generate-flags": "tsx cli/generateFlags.ts"
   },
+  "bin": {
+    "react-flagpack": "./cli/flagpack.js"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -58,8 +61,8 @@
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "flagpack-core": "1.1.2",
-    "next": "^14.1.4",
+    "flagpack-core": "2.0.0",
+    "fs-extra": "^11.2.0",
     "postcss-clean": "^1.1.0",
     "rimraf": "^3.0.2",
     "sass": "^1.72.0",
@@ -68,16 +71,12 @@
     "tsx": "^4.7.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.8.1"
+    "vite-plugin-dts": "^3.8.1",
+    "chalk": "^5.3.0",
+    "meow": "^13.2.0"
   },
   "peerDependencies": {
-    "next": "^14.1.4",
     "react": "^16.8.* || ^17.* || ^18.*"
-  },
-  "peerDependenciesMeta": {
-    "next": {
-      "optional": true
-    }
   },
   "authors": [
     {
@@ -100,6 +99,5 @@
       "social": "@zoeyfrisart",
       "url": "https://zoey-frisart.com"
     }
-  ],
-  "dependencies": {}
+  ]
 }

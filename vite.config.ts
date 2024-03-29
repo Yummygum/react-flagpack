@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(new URL('src/main.ts', import.meta.url).pathname),
-      name: 'FlagLibrary',
+      name: 'ReactFlagpack',
       formats: ['es', 'umd', 'cjs'],
       fileName: 'react-flag'
     },

@@ -30,6 +30,21 @@ Flagpack for React is created using React v16.8. The Flagpack component has not 
 $: npm install react-flagpack --save
 ```
 
+This package depends on the files being injected into the static folder of the project.
+React flagpack comes bundled with a CLI that will do this automatically for you, but you have to tell node to execute it.
+
+Add the following to the scripts in package.json
+
+```json
+  "postinstall": "react-flagpack"
+```
+
+
+This tool accepts the parameter "--framework" which can be used to pass the correct framework to it.
+The default selected framework supports NextJS, create-react-app, Remix.
+
+For Gastby support please provide the `--framework gatsby` option
+
 ## Usage
 
 ### Defining the component
