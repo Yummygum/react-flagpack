@@ -25,4 +25,5 @@ UserInterfaceState.xcuserstate
 **/test-applications/**/static/flags
 **/test-applications/**/.next
 **/test-applications/**/.cache
+**/test-applications/**/public/~partytown
 react-flagpack.tgz
