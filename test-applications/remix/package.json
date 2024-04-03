@@ -10,8 +10,7 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
     "preinstall": "cd ../../ && yarn generate:local",
-    "postinstall": "react-flagpack",
-    "flags": "react-flagpack"
+    "postinstall": "node ../../cli/flagpack.js --path ./public/flags"
   },
   "dependencies": {
     "@remix-run/node": "^2.8.1",
@@ -20,7 +19,7 @@
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flagpack": "../../react-flagpack.tgz"
+    "react-flagpack": "link:../../"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.1",

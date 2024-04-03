@@ -15,8 +15,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "preinstall": "cd ../../ && yarn generate:local",
-    "postinstall": "react-flagpack",
-    "flags": "react-flagpack"
+    "postinstall": "node ../../cli/flagpack.js --path ./public/flags"
   },
   "dependencies": {
     "gatsby": "^5.13.3",
@@ -24,12 +23,13 @@
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flagpack": "../../react-flagpack.tgz"
+    "react-flagpack": "link:../../"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }

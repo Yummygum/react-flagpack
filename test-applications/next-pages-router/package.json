@@ -8,14 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "preinstall": "rm -rf ./node_modules && cd ../../ && yarn generate:local",
-    "postinstall": "react-flagpack",
-    "flags": "react-flagpack"
+    "postinstall": "node ../../cli/flagpack.js --path ./public/flags"
   },
   "dependencies": {
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-flagpack": "../../react-flagpack.tgz"
+    "react-flagpack": "link:../../"
   },
   "devDependencies": {
     "@types/node": "^20",

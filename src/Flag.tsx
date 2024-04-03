@@ -3,7 +3,7 @@ import { Flags } from 'flagpack-core'
 
 import './Flag.scss'
 
-interface Props {
+export interface FlagProps {
   code: Flags;
   size?: string;
   gradient?: '' | 'top-down' | 'real-circular' | 'real-linear';
@@ -13,7 +13,7 @@ interface Props {
   className?: string;
 }
 
-const Flag: React.FC<Props> = ({
+const Flag: React.FC<FlagProps> = ({
   code = 'NL',
   size = 'l',
   gradient = '',
@@ -21,7 +21,7 @@ const Flag: React.FC<Props> = ({
   hasDropShadow = false,
   hasBorderRadius = true,
   className
-}: Props) => {
+}: FlagProps) => {
   return (
     <div
       className={`flag ${gradient} size-${size} ${hasBorder ? 'border' : ''} ${hasDropShadow ? 'drop-shadow' : ''} ${hasBorderRadius ? 'border-radius' : ''} ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`}

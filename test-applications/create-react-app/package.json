@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flagpack": "../../react-flagpack.tgz",
+    "react-flagpack": "link:../../",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -18,8 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "preinstall": "cd ../../ && yarn generate:local",
-    "postinstall": "react-flagpack --path ./public/flags",
-    "flags": "react-flagpack"
+    "postinstall": "node ../../cli/flagpack.js --path ./public/flags"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +37,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
