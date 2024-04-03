@@ -1,5 +1,6 @@
 import Flag from 'react-flagpack'
 import { Flags } from 'flagpack-core'
+import 'react-flagpack/dist/style.css'
 
 export default function Home() {
   const flags: Flags[] = [
@@ -509,12 +510,46 @@ export default function Home() {
     '074'
   ]
 
+  const sizes = ['s', 'm', 'l']
+  const gradient = ['top-down', 'real-circular', 'real-linear', '']
+  const hasBorder = [true, false]
+  const hasDropShadow = [true, false]
+  const hasBorderRadius = [true, false]
+
   return (
     <div className="App">
       <header className="App-header">
         {flags.map((flag) => (
-          <div key={flag}>
-            <Flag code={flag} size="s" />
+          <div key={flag} className="App-Flag">
+            {sizes.map((size) => (
+              <>
+                {gradient.map((gradient) => (
+                  <>
+                    {hasBorder.map((hasBorder) => (
+                      <>
+                        {hasDropShadow.map((hasDropShadow) => (
+                          <>
+                            {hasBorderRadius.map((hasBorderRadius) => (
+                              <>
+                                <Flag
+                                  code={flag}
+                                  size={size}
+                                  gradient={gradient}
+                                  hasBorder={hasBorder}
+                                  hasDropShadow={hasDropShadow}
+                                  hasBorderRadius={hasBorderRadius}
+                                />
+                              </>
+                            ))}
+                          </>
+                        ))}
+                      </>
+                    ))}
+                  </>
+                ))}
+              </>
+            ))}
+            <Flag code={flag} />
             <Flag code={flag} size="m" />
             <Flag code={flag} size="l" />
             <br></br>

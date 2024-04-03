@@ -1,5 +1,6 @@
 import './App.css'
 import Flag from 'react-flagpack'
+import 'react-flagpack/dist/style.css'
 
 function App() {
   const flags = [
@@ -510,7 +511,7 @@ function App() {
   ]
 
   const sizes = ['s', 'm', 'l']
-  const gradient = ['top-down' | 'real-circular' | 'real-linear', '']
+  const gradient = ['top-down', 'real-circular', 'real-linear', '']
   const hasBorder = [true, false]
   const hasDropShadow = [true, false]
   const hasBorderRadius = [true, false]
@@ -519,7 +520,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {flags.map((flag) => (
-          <div key={flag}>
+          <div key={flag} className="App-Flag">
             {sizes.map((size) => (
               <>
                 {gradient.map((gradient) => (

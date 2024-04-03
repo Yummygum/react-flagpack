@@ -6,7 +6,7 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts(), cssInjectedByJsPlugin()],
+  plugins: [react(), dts()],
   build: {
     lib: {
       entry: path.resolve(new URL('src/main.ts', import.meta.url).pathname),
@@ -17,7 +17,6 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react/jsx-runtime', 'flagpack-core'],
       output: {
-        banner: '"use client"',
         dir: 'dist',
         globals: {
           react: 'React',

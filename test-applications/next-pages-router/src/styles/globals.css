@@ -6,6 +6,11 @@ body {
   text-align: center;
 }
 
+.App-Flag {
+  content-visibility: auto;
+  contain-intrinsic-size: 1424px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -21,7 +26,9 @@ body {
   background-color: #FFD3BA;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 60px);
+  grid-template-columns: repeat(auto-fill, 120px);
+  gap: 40px;
+  content-visibility: auto;
 }
 
 .App-link {

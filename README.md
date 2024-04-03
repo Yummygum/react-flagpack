@@ -51,6 +51,9 @@ For Gastby support please provide the `--framework gatsby` option
 Import the Flagpack component into any of your project's React components.
 ```js
 import Flag from 'react-flagpack'
+// # Optional but required for props other than code & size to work.
+// Can also be imported in a css file using @import 'react-flagpack/dist/style.css';
+import 'react-flagpack/dist/style.css'
 ```
 
 ### Use in JSX
@@ -74,6 +77,29 @@ import Flag from 'react-flagpack'
 | hasBorder |  Boolean | false | true | - |
 | hasBorderRadius | Boolean | false | true | - |
 | gradient |  String | false | '' | 'top-down', 'real-linear' or 'real-circular' |
+
+## Migrating to 2.0.0
+To migrate to react-flagpack 2.0.0 you will need to make some minor changes to your code base. First you will need to add react-flagpack to your post-install hook see [installation](#installation), then run yarn install (ensuring you are on at minimal react-flagpack 2.0.0).
+
+After install you should see a flags folder in the public (or static) folder of your project.
+
+Since react-flagpack styles are no longer injected in the Flag by default.
+This change was made for two reasons:
+- Server side support (the injecting relied on document)
+- Not all users require the default styling so this caused unnecessary addition to bundle size
+
+The new way of loading the CSS is by importing the default styles. You can do this in one of two ways.
+```ts
+// Component.tsx - In a component where flagpack is used
+import 'react-flagpack/dist/style.css'
+```
+
+Or
+
+```css
+/* Global.css - Importing it in the global css file */
+@import 'react-flagpack/dist/style.css';
+```
 
 ## Support
 

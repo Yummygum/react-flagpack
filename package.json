@@ -32,7 +32,20 @@
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && tsc && vite build && npm run generate-flags",
-    "generate-flags": "tsx cli/generateFlags.ts"
+    "generate-flags": "tsx cli/generateFlags.ts",
+    "generate:local": "rm -rf ./react-flagpack.tgz && tar czvf react-flagpack.tgz --exclude=node_modules --exclude=test-applications .",
+    "dev:install": "yarn cache clean react-flagpack && yarn dev:install:react && yarn dev:install:gatsby && yarn dev:install:next-app-router && yarn dev:install:next-pages-router && yarn dev:install:remix && cd ..",
+    "dev:install:react": "cd test-applications/create-react-app && yarn remove react-flagpack && yarn add ../../react-flagpack.tgz && cd ..",
+    "dev:install:gatsby": "cd test-applications/gatsby && yarn remove react-flagpack && yarn add ../../react-flagpack.tgz && cd ..",
+    "dev:install:next-app-router": "cd test-applications/next-app-router && yarn remove react-flagpack && yarn add ../../react-flagpack.tgz && cd ..",
+    "dev:install:next-pages-router": "cd test-applications/next-pages-router && yarn remove react-flagpack && yarn add ../../react-flagpack.tgz && cd ..",
+    "dev:install:remix": "cd test-applications/remix && yarn remove react-flagpack && yarn add ../../react-flagpack.tgz && cd ..",
+    "dev:test": "concurrently \"yarn dev:react\" \"yarn dev:gatsby\" \"yarn dev:next-app-router\" \"yarn dev:next-pages-router\" \"yarn dev:remix\"",
+    "dev:react": "cd test-applications && cd create-react-app && yarn start",
+    "dev:gatsby": "cd test-applications && cd gatsby && yarn develop",
+    "dev:next-app-router": "cd test-applications && cd next-app-router && yarn dev",
+    "dev:next-pages-router": "cd test-applications && cd next-pages-router && yarn dev",
+    "dev:remix": "cd test-applications && cd remix && yarn dev"
   },
   "bin": {
     "react-flagpack": "./cli/flagpack.js"
@@ -53,6 +66,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^9.5.1",
     "chalk": "^5.3.0",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "eslint-config-airbnb": "18.2.1",
@@ -73,7 +87,6 @@
     "tsx": "^4.7.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-css-injected-by-js": "^3.5.0",
     "vite-plugin-dts": "^3.8.1"
   },
   "peerDependencies": {

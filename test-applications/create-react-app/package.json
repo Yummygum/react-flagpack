@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flagpack": "../../",
+    "react-flagpack": "../../react-flagpack.tgz",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -17,6 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "preinstall": "cd ../../ && yarn generate:local",
     "postinstall": "react-flagpack --path ./public/flags",
     "flags": "react-flagpack"
   },

@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "preinstall": "rm -rf ./node_modules && cd ../../ && yarn generate:local",
     "postinstall": "react-flagpack --path ./public/flags",
     "flags": "react-flagpack"
   },
@@ -14,7 +15,7 @@
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-flagpack": "../../"
+    "react-flagpack": "../../react-flagpack.tgz"
   },
   "devDependencies": {
     "@types/node": "^20",
