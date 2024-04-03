@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import Flag from 'react-flagpack'
 import { Flags } from 'flagpack-core'
 import 'react-flagpack/dist/style.css'
-import type { FlagProps } from "react-flagpack";
 
 export default function Home() {
   const flags: Flags[] = [
