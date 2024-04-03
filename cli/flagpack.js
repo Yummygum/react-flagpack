@@ -13,7 +13,8 @@ const cli = meow(
     $ react-flagpack [options]
 
   Options
-    --framework=default|gatsby  The framework to generate flags for. Default is 'default'.`,
+    --framework=default|gatsby  The framework to generate flags for. Default is 'default'.
+    --path=string      The path to copy the flags to. Default is 'public/flags' relative to the project.`,
   {
     importMeta: import.meta,
     flags: {
@@ -22,12 +23,16 @@ const cli = meow(
         default: 'default',
         shortFlag: 'f',
         choices: ['default', 'gatsby']
+      },
+      path: {
+        type: 'string',
+        shortFlag: 'a'
       }
     }
   }
 )
 
-function copyFrameworkAware(framework) {
+function copyFrameworkAware(framework, absolutePath) {
   const __filename = fileURLToPath(import.meta.url)
   const __dirname = dirname(__filename)
 
@@ -39,9 +44,14 @@ function copyFrameworkAware(framework) {
     destination = path.resolve(targetLevel, '/static/flags')
   }
 
+  if (absolutePath) {
+    destination = absolutePath
+  }
+
   console.log(
     `${chalk.blue('info')} React flagpack is copying flags to ${destination}`
   )
+
   copy(source, destination, function (err) {
     if (err) {
       console.log(`${chalk.red('error')} React flagpack failed to copy flags`)
@@ -54,4 +64,4 @@ function copyFrameworkAware(framework) {
   })
 }
 
-copyFrameworkAware(cli.flags.framework)
+copyFrameworkAware(cli.flags.framework, cli.flags.path)

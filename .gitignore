@@ -16,3 +16,11 @@ UserInterfaceState.xcuserstate
 .env
 .rpt2_cache/
 .vscode
+
+**/test-applications/**/public/flags
+**/test-applications/**/build
+**/test-applications/**/dist
+**/test-applications/**/node_modules
+**/test-applications/**/coverage
+**/test-applications/**/static/flags
+**/test-applications/**/.next
