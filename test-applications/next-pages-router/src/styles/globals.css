@@ -23,7 +23,7 @@ body {
 }
 
 .App-header {
-  background-color: #FFD3BA;
+  background-color: #ffafcc;
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(auto-fill, 120px);

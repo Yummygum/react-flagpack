@@ -24,4 +24,5 @@ UserInterfaceState.xcuserstate
 **/test-applications/**/coverage
 **/test-applications/**/static/flags
 **/test-applications/**/.next
+**/test-applications/**/.cache
 react-flagpack.tgz
