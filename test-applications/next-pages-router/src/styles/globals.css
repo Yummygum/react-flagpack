@@ -1,0 +1,45 @@
+body {
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-Flag {
+  content-visibility: auto;
+  contain-intrinsic-size: 1424px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #ffafcc;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px);
+  gap: 40px;
+  content-visibility: auto;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,8 +1,9 @@
 {
   "name": "react-flagpack",
   "description": "Gorgeous flag components for your React project.",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": "Yummygum <info@yummygum.com> (https://yummygum.com)",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yummygum/react-flagpack.git"
@@ -20,8 +21,8 @@
   "files": [
     "dist/*"
   ],
-  "main": "dist/react-flag-rollup.cjs.js",
-  "types": "dist/main.d.ts",
+  "main": "dist/react-flag.js",
+  "types": "dist/Flag.d.ts",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Yummygum/react-flagpack/issues"
@@ -29,31 +30,41 @@
   "type": "module",
   "homepage": "https://flagpack.xyz",
   "scripts": {
-    "dev": "rollup -cw",
-    "build": "rimraf dist && cross-env NODE_ENV=production rollup -c && npm run generate-flags",
-    "generate-flags": "node cli/generateFlags.js"
+    "dev": "vite",
+    "build": "rimraf dist && tsc && vite build && npm run generate-flags",
+    "generate-flags": "tsx cli/generateFlags.ts",
+    "generate:local": "rm -rf ./react-flagpack.tgz && tar czvf react-flagpack.tgz --exclude=node_modules --exclude=test-applications .",
+    "dev:install": "yarn cache clean react-flagpack && yarn cache clean ../../react-flagpack.tgz && yarn cache clean react-flagpack.tgz && yarn dev:install:react && yarn dev:install:gatsby && yarn dev:install:next-app-router && yarn dev:install:next-pages-router && yarn dev:install:remix && cd ..",
+    "dev:install:react": "cd test-applications/create-react-app && yarn install --refresh-lockfile && cd ..",
+    "dev:install:gatsby": "cd test-applications/test-gatsby && yarn install --refresh-lockfile && cd ..",
+    "dev:install:next-app-router": "cd test-applications/next-app-router && yarn install --refresh-lockfile && cd ..",
+    "dev:install:next-pages-router": "cd test-applications/next-pages-router && yarn install --refresh-lockfile && cd ..",
+    "dev:install:remix": "cd test-applications/remix && yarn install --refresh-lockfile && cd ..",
+    "dev:test": "concurrently \"yarn dev:react\" \"yarn dev:gatsby\" \"yarn dev:next-app-router\" \"yarn dev:next-pages-router\" \"yarn dev:remix\"",
+    "dev:react": "cd test-applications && cd create-react-app && yarn start",
+    "dev:gatsby": "cd test-applications && cd test-gatsby && yarn develop",
+    "dev:next-app-router": "cd test-applications && cd next-app-router && yarn dev",
+    "dev:next-pages-router": "cd test-applications && cd next-pages-router && yarn dev",
+    "dev:remix": "cd test-applications && cd remix && yarn dev"
   },
+  "bin": "./cli/flagpack.js",
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/eslint-parser": "7.11.3",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
-    "@types/react": "^16.8.18",
-    "@typescript-eslint/eslint-plugin": "4.11.1",
-    "@typescript-eslint/parser": "4.11.1",
+    "@babel/core": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^9.5.1",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-1": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "copy-webpack-plugin": "^6.0.3",
+    "chalk": "^5.3.0",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "eslint-config-airbnb": "18.2.1",
@@ -62,32 +73,22 @@
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
-    "flagpack-core": "^2.0.0",
-    "node-sass": "^4.12.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "flagpack-core": "2.0.0",
+    "fs-extra": "^11.2.0",
+    "meow": "^13.2.0",
     "postcss-clean": "^1.1.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.36.1",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-babel-minify": "^10.0.0",
-    "rollup-plugin-babili": "^3.1.1",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-node-resolve": "^5.0.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-serve": "^1.1.0",
-    "rollup-plugin-typescript2": "^0.21.1",
-    "rollup-watch": "latest",
-    "ts-node": "^10.2.0",
+    "sass": "^1.72.0",
+    "ts-node": "^10.9.2",
     "tslib": "^1.9.3",
-    "typescript": "^3.4.5",
-    "webpack": "^4.43.0",
-    "webpack-dev-server": "^3.11.0"
+    "tsx": "^4.7.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.8.1"
   },
   "peerDependencies": {
-    "react": "^16.8.* || ^17.*"
+    "react": "^16.8.* || ^17.* || ^18.*"
   },
   "authors": [
     {
@@ -104,6 +105,12 @@
       "name": "Yummygum",
       "social": "@yummygum",
       "url": "https://yummygum.com"
+    },
+    {
+      "name": "Zoey Frisart",
+      "social": "@zoeyfrisart",
+      "url": "https://zoey-frisart.com"
     }
-  ]
+  ],
+  "packageManager": "yarn@4.1.1"
 }
