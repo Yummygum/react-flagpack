@@ -1,7 +1,6 @@
+import { Flags } from 'flagpack-core';
 import * as React from 'react';
-import type { Flags } from 'flagpack-core';
-import './Flag.scss';
-interface Props {
+export interface FlagProps {
     code: Flags;
     size?: string;
     gradient?: '' | 'top-down' | 'real-circular' | 'real-linear';
@@ -10,5 +9,5 @@ interface Props {
     hasBorderRadius?: boolean;
     className?: string;
 }
-declare const Flag: React.FC<Props>;
+declare const Flag: React.FC<FlagProps>;
 export default Flag;

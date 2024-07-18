@@ -1,22 +1,25 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "module": "es2015",
-    "target": "es2017",
-    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "emitDeclarationOnly": true,
+    "target": "es2020",
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "sourceMap": true,
-    "declaration": true
+    "declaration": true,
+    "esModuleInterop": true,
+    "outDir": "dist"
   },
-  "include": [
-    "src/**/*.tsx"
-  ],
-  "exclude": [
-    "flagpack-core"
-  ],
-  "types" : ["node"]
+  "include": ["src/**/*.tsx"],
+  "exclude": ["flagpack-core"],
+  "types": ["node"],
+  "buildOptions": {},
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

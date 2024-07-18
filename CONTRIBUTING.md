@@ -26,31 +26,31 @@ $: git clone https://github.com/{your-username}/react-flagpack.git
 $: npm install
 ```
 
-3. Run npm link to create a local instance of the package
+Make the changes you are trying to make, then do the following:
+
+3. Create a build
 ```bash
-$: npm link
+$: npm run build
 ```
 
-4. Now install the app you're using flagpack in, for this instance we'll be using [a React Next App](https://nextjs.org/docs/api-reference/create-next-app):
+4. Install the dependencies of the test-applications
 ```bash
-$: npx create-next-app
+$: npm run dev:install
 ```
 
-5. Use `cd` to move into the app directory and use `npm link` to add your local instance of `react-flagpack`
+5. Start the test applications
 ```bash
-# move into directory
-$: cd next-app
-
-# add local instance of react-flagpack
-$: npm link react-flagpack
+$: npm run dev:test
 ```
 
-6. Now in the `react-flagpack` run the dev script so your changes are updated automatically
-```bash
-$: npm run dev
-```
+This will open a test application showing all flags in different frameworks:
+- [create-react-app](http://localhost:3000)
+- [Gatsby](http://localhost:3001)
+- [NextJS App Router](http://localhost:3002)
+- [NextJS Pages Router](http://localhost:3003)
+- [Remix](http://localhost:3004)
 
-7. You're now ready to go to develop on the `react-flagpack` package!
+1. You're now ready to go to develop on the `react-flagpack` package!
 ## Building the package
 Building the package should only ever be needed if there are changes from the `flagpack-core` devDependency. `react-flagpack`
  will be built based on the `CountryCodeList.json` in `flagpack-core`.
