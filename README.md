@@ -33,7 +33,7 @@ $: npm install react-flagpack --save
 This package depends on the files being injected into the static folder of the project.
 React flagpack comes bundled with a CLI that will do this automatically for you, but you have to tell node to execute it.
 
-Add the following to the scripts in package.json
+Add the following to the scripts in package.json *Note that postinstall sometimes doesn't run with certain package managers, so you may need to run it manually*
 
 ```json
   "postinstall": "react-flagpack"
@@ -79,7 +79,7 @@ import 'react-flagpack/dist/style.css'
 | gradient |  String | false | '' | 'top-down', 'real-linear' or 'real-circular' |
 
 ## Migrating to 2.0.0
-To migrate to react-flagpack 2.0.0 you will need to make some minor changes to your code base. First you will need to add react-flagpack to your post-install hook see [installation](#installation), then run yarn install (ensuring you are on at minimal react-flagpack 2.0.0).
+To migrate to react-flagpack 2.0.0 you will need to make some minor changes to your code base. First you will need to add react-flagpack to your post-install hook see [installation](#installation), then run yarn install (ensuring you are on at minimal react-flagpack 2.0.2).
 
 After install you should see a flags folder in the public (or static) folder of your project.
 
