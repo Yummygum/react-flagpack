@@ -37,15 +37,15 @@ function copyFrameworkAware(framework, absolutePath) {
   const __dirname = dirname(__filename)
 
   const source = `${__dirname}/../dist/flags`
-  const targetLevel = path.resolve(__dirname, '../../../')
-  let destination = path.resolve(targetLevel, './public/flags')
+  const projectRoot = process.cwd()
+  let destination = path.resolve(projectRoot, './public/flags')
 
   if (framework === 'gatsby') {
-    destination = path.resolve(targetLevel, '/static/flags')
+    destination = path.resolve(projectRoot, '/static/flags')
   }
 
   if (absolutePath) {
-    destination = absolutePath
+    destination = path.resolve(projectRoot, absolutePath)
   }
 
   console.log(

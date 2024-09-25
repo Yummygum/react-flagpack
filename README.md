@@ -36,7 +36,15 @@ React flagpack comes bundled with a CLI that will do this automatically for you,
 Add the following to the scripts in package.json *Note that postinstall sometimes doesn't run with certain package managers, so you may need to run it manually*
 
 ```json
-  "postinstall": "react-flagpack"
+{
+  "scripts": {
+    // ...rest of your scripts
+    "postinstall": "react-flagpack"
+  },
+  "dependencies": {
+    "react-flagpack": "^2.0.5"
+  }
+}
 ```
 
 
