@@ -90,7 +90,7 @@
     "vite-plugin-dts": "^3.8.1"
   },
   "peerDependencies": {
-    "react": "^16.8.* || ^17.* || ^18.*"
+    "react": "^16.8.* || ^17.* || ^18.* || ^19.*"
   },
   "authors": [
     {
