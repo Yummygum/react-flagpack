@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Flag from 'react-flagpack'
 import { Flags } from 'flagpack-core'
 import 'react-flagpack/dist/style.css'
@@ -513,7 +511,12 @@ export default function Home() {
   ]
 
   const sizes = ['s', 'm', 'l']
-  const gradient = ['top-down', 'real-circular', 'real-linear', '']
+  const gradient: ('' | 'top-down' | 'real-circular' | 'real-linear')[] = [
+    'top-down',
+    'real-circular',
+    'real-linear',
+    ''
+  ]
   const hasBorder = [true, false]
   const hasDropShadow = [true, false]
   const hasBorderRadius = [true, false]
@@ -523,34 +526,32 @@ export default function Home() {
       <header className="App-header">
         {flags.map((flag) => (
           <div key={flag} className="App-Flag">
-            {sizes.map((size) => (
-              <>
-                {gradient.map((gradient) => (
-                  <>
-                    {hasBorder.map((hasBorder) => (
-                      <>
-                        {hasDropShadow.map((hasDropShadow) => (
-                          <>
-                            {hasBorderRadius.map((hasBorderRadius) => (
-                              <>
-                                <Flag
-                                  code={flag}
-                                  size={size}
-                                  gradient={gradient}
-                                  hasBorder={hasBorder}
-                                  hasDropShadow={hasDropShadow}
-                                  hasBorderRadius={hasBorderRadius}
-                                />
-                              </>
-                            ))}
-                          </>
-                        ))}
-                      </>
-                    ))}
-                  </>
-                ))}
-              </>
-            ))}
+            {sizes.map((size) =>
+              gradient
+                .filter((gradient) =>
+                  ['', 'top-down', 'real-circular', 'real-linear'].includes(
+                    gradient
+                  )
+                )
+                .map((gradient, gradientIndex) =>
+                  hasBorder.map((hasBorder, borderIndex) =>
+                    hasDropShadow.map((hasDropShadow, shadowIndex) =>
+                      hasBorderRadius.map((hasBorderRadius, radiusIndex) => (
+                        <Flag
+                          key={`${flag}-${size}-${gradientIndex}-${borderIndex}-${shadowIndex}-${radiusIndex}`}
+                          code={flag}
+                          size={size}
+                          gradient={gradient}
+                          hasBorder={hasBorder}
+                          hasDropShadow={hasDropShadow}
+                          hasBorderRadius={hasBorderRadius}
+                        />
+                      ))
+                    )
+                  )
+                )
+            )}
+
             <Flag code={flag} />
             <Flag code={flag} size="m" />
             <Flag code={flag} size="l" />

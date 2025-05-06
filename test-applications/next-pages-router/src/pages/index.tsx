@@ -511,7 +511,12 @@ export default function Home() {
   ]
 
   const sizes = ['s', 'm', 'l']
-  const gradient = ['top-down', 'real-circular', 'real-linear', '']
+  const gradient: ('' | 'top-down' | 'real-circular' | 'real-linear')[] = [
+    'top-down',
+    'real-circular',
+    'real-linear',
+    ''
+  ]
   const hasBorder = [true, false]
   const hasDropShadow = [true, false]
   const hasBorderRadius = [true, false]
