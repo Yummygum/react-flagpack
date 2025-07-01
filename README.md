@@ -1,3 +1,9 @@
+> [!CAUTION]
+> THIS PROJECT ONLY CONTAINS A PATCH TO MAKE `react-flagpack` WORK WITH REACT 19.
+>
+> IF YOU ENCOUNTER ANY ISSUES, PLEASE REPORT THEM IN THE `react-flagpack` REPO.
+> 
+
 # Flagpack
 
 Flagpack contains 250+ flag icons to easily use within your code project. Flagpack is an open source project and available for JavaScript frameworks/libraries React, Vue and Svelte.
