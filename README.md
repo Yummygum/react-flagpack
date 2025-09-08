@@ -85,6 +85,7 @@ import 'react-flagpack/dist/style.css'
 | hasBorder |  Boolean | false | true | - |
 | hasBorderRadius | Boolean | false | true | - |
 | gradient |  String | false | '' | 'top-down', 'real-linear' or 'real-circular' |
+| basePath |  String | false | '' | In case you want to serve your images from a CDN or if you're serving your React application from a custom path. For example with [basePath](https://nextjs.org/docs/app/api-reference/config/next-config-js/basePath)  |
 
 ## Migrating to 2.0.0
 To migrate to react-flagpack 2.0.0 you will need to make some minor changes to your code base. First you will need to add react-flagpack to your post-install hook see [installation](#installation), then run yarn install (ensuring you are on at minimal react-flagpack 2.0.2).
