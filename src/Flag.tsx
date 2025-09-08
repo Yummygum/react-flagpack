@@ -4,14 +4,14 @@ import { Flags } from 'flagpack-core'
 import './Flag.scss'
 
 export interface FlagProps {
-  code: Flags;
-  size?: string;
-  gradient?: '' | 'top-down' | 'real-circular' | 'real-linear';
-  hasBorder?: boolean;
-  hasDropShadow?: boolean;
-  hasBorderRadius?: boolean;
-  className?: string;
-  basePath?: string;
+  code: Flags
+  size?: string
+  gradient?: '' | 'top-down' | 'real-circular' | 'real-linear'
+  hasBorder?: boolean
+  hasDropShadow?: boolean
+  hasBorderRadius?: boolean
+  className?: string
+  basePath?: string
 }
 
 const Flag: React.FC<FlagProps> = ({
@@ -22,11 +22,15 @@ const Flag: React.FC<FlagProps> = ({
   hasDropShadow = false,
   hasBorderRadius = true,
   className,
-  basePath = '';
+  basePath = ''
 }: FlagProps) => {
   return (
     <div
-      className={`flag ${gradient} size-${size} ${hasBorder ? 'border' : ''} ${hasDropShadow ? 'drop-shadow' : ''} ${hasBorderRadius ? 'border-radius' : ''} ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`}
+      className={`flag ${gradient} size-${size} ${hasBorder ? 'border' : ''} ${
+        hasDropShadow ? 'drop-shadow' : ''
+      } ${hasBorderRadius ? 'border-radius' : ''} ${
+        className ? className.replace(/\s\s+/g, ' ').trim() : ''
+      }`}
     >
       {/* Depend on the build configs to make the assets available at this location */}
       <img src={`${basePath}/flags/${size}/${code}.svg`} />
