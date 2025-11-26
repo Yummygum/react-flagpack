@@ -510,13 +510,8 @@ export default function Home() {
     '074'
   ]
 
-  const sizes = ['s', 'm', 'l']
-  const gradient: ('' | 'top-down' | 'real-circular' | 'real-linear')[] = [
-    'top-down',
-    'real-circular',
-    'real-linear',
-    ''
-  ]
+  const sizes = ['s', 'm', 'l'] as const
+  const gradient = ['top-down', 'real-circular', 'real-linear', ''] as const
   const hasBorder = [true, false]
   const hasDropShadow = [true, false]
   const hasBorderRadius = [true, false]
@@ -527,29 +522,23 @@ export default function Home() {
         {flags.map((flag) => (
           <div key={flag} className="App-Flag">
             {sizes.map((size) =>
-              gradient
-                .filter((gradient) =>
-                  ['', 'top-down', 'real-circular', 'real-linear'].includes(
-                    gradient
+              gradient.map((gradient, gradientIndex) =>
+                hasBorder.map((hasBorder, borderIndex) =>
+                  hasDropShadow.map((hasDropShadow, shadowIndex) =>
+                    hasBorderRadius.map((hasBorderRadius, radiusIndex) => (
+                      <Flag
+                        key={`${flag}-${size}-${gradientIndex}-${borderIndex}-${shadowIndex}-${radiusIndex}`}
+                        code={flag}
+                        size={size}
+                        gradient={gradient}
+                        hasBorder={hasBorder}
+                        hasDropShadow={hasDropShadow}
+                        hasBorderRadius={hasBorderRadius}
+                      />
+                    ))
                   )
                 )
-                .map((gradient, gradientIndex) =>
-                  hasBorder.map((hasBorder, borderIndex) =>
-                    hasDropShadow.map((hasDropShadow, shadowIndex) =>
-                      hasBorderRadius.map((hasBorderRadius, radiusIndex) => (
-                        <Flag
-                          key={`${flag}-${size}-${gradientIndex}-${borderIndex}-${shadowIndex}-${radiusIndex}`}
-                          code={flag}
-                          size={size}
-                          gradient={gradient}
-                          hasBorder={hasBorder}
-                          hasDropShadow={hasDropShadow}
-                          hasBorderRadius={hasBorderRadius}
-                        />
-                      ))
-                    )
-                  )
-                )
+              )
             )}
 
             <Flag code={flag} />
