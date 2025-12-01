@@ -15,7 +15,7 @@ export default defineConfig({
       fileName: 'react-flag'
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime', 'flagpack-core'],
+      external: ['react', 'react/jsx-runtime', 'flagpack-core', 'react-dom'],
       output: {
         dir: 'dist',
         globals: {
