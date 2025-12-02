@@ -11,6 +11,7 @@ export interface FlagProps {
   hasDropShadow?: boolean;
   hasBorderRadius?: boolean;
   className?: string;
+  basePath?: string;
 }
 
 const Flag: React.FC<FlagProps> = ({
@@ -20,14 +21,15 @@ const Flag: React.FC<FlagProps> = ({
   hasBorder = true,
   hasDropShadow = false,
   hasBorderRadius = true,
-  className
+  className,
+  basePath = ''
 }: FlagProps) => {
   return (
     <div
       className={`flag ${gradient} size-${size} ${hasBorder ? 'border' : ''} ${hasDropShadow ? 'drop-shadow' : ''} ${hasBorderRadius ? 'border-radius' : ''} ${className ? className.replace(/\s\s+/g, ' ').trim() : ''}`}
     >
       {/* Depend on the build configs to make the assets available at this location */}
-      <img src={`/flags/${size}/${code}.svg`} />
+      <img src={`${basePath}/flags/${size}/${code}.svg`} />
     </div>
   )
 }

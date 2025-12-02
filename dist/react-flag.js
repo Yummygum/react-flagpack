@@ -1,19 +1,20 @@
 import { jsx as e } from "react/jsx-runtime";
-const d = ({
+const g = ({
   code: a = "NL",
   size: r = "l",
-  gradient: l = "",
-  hasBorder: o = !0,
-  hasDropShadow: t = !1,
-  hasBorderRadius: $ = !0,
-  className: s
+  gradient: $ = "",
+  hasBorder: l = !0,
+  hasDropShadow: o = !1,
+  hasBorderRadius: t = !0,
+  className: s,
+  basePath: d = ""
 }) => /* @__PURE__ */ e(
   "div",
   {
-    className: `flag ${l} size-${r} ${o ? "border" : ""} ${t ? "drop-shadow" : ""} ${$ ? "border-radius" : ""} ${s ? s.replace(/\s\s+/g, " ").trim() : ""}`,
-    children: /* @__PURE__ */ e("img", { src: `/flags/${r}/${a}.svg` })
+    className: `flag ${$} size-${r} ${l ? "border" : ""} ${o ? "drop-shadow" : ""} ${t ? "border-radius" : ""} ${s ? s.replace(/\s\s+/g, " ").trim() : ""}`,
+    children: /* @__PURE__ */ e("img", { src: `${d}/flags/${r}/${a}.svg` })
   }
-), i = d;
+), c = g;
 export {
-  i as default
+  c as default
 };
