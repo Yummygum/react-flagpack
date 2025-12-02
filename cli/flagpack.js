@@ -41,7 +41,7 @@ function copyFrameworkAware(framework, absolutePath) {
   let destination = path.resolve(projectRoot, './public/flags')
 
   if (framework === 'gatsby') {
-    destination = path.resolve(projectRoot, '/static/flags')
+    destination = path.resolve(projectRoot, './static/flags')
   }
 
   if (absolutePath) {
