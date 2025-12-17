@@ -8,6 +8,7 @@ export interface FlagProps {
     hasDropShadow?: boolean;
     hasBorderRadius?: boolean;
     className?: string;
+    basePath?: string;
 }
 declare const Flag: React.FC<FlagProps>;
 export default Flag;
